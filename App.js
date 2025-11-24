@@ -32,16 +32,17 @@ export default function App() {
     <View style={styles.container}>
       {location ? (
         <MapView
-          style={styles.map}
-          showsUserLocation={true}
-          followsUserLocation={true}
-          initialRegion={{
-            latitude: location.latitude,
-            longitude: location.longitude,
-            latitudeDelta: 0.01,
-            longitudeDelta: 0.01,
-          }}
-        >
+  style={styles.map}
+  showsUserLocation={true}
+  followsUserLocation={true}
+  initialRegion={{
+    latitude: location.latitude,
+    longitude: location.longitude,
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  }}
+>
+
           {nearbyRestaurant && (
             <Marker
               coordinate={{
